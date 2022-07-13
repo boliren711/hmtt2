@@ -6,4 +6,12 @@ const axios = theAxios.create({
   timeout:20000 // 请求20秒无反应直接判定超时
 })
 
-export default axios
+export default ({url, method = 'GET', params = {}, data = {}, headers = {}}) => {
+  return axios({
+      url,
+      method,
+      params,
+      data,
+      headers
+  })
+}
