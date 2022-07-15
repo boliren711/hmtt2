@@ -2,16 +2,16 @@
 import theAxios from 'axios'
 const axios = theAxios.create({
   // 接口基地址
-  baseURL: 'http://ttapi.research.itcast.cn/'，
-  timeout:20000 // 请求20秒无反应直接判定超时
+  baseURL: 'http://geek.itheima.net/',
+  timeout: 20000 // 请求20秒无反应直接判定超时
 })
 
-export default ({url, method = 'GET', params = {}, data = {}, headers = {}}) => {
+export default ({ url, method = 'GET', params = {}, data = {}, headers = {} }) => {
   return axios({
-      url,
-      method,
-      params,
-      data,
-      headers
+    url,
+    method,
+    params,
+    data,
+    headers
   })
 }
